@@ -1,0 +1,9 @@
+<h1>Enter User Info to Authenticate</h1>
+
+<%= form_for :session, url: login_path do |f| %>
+  <%= f.text_field :username, placeholder: "Username" %>
+  <%= f.password_field :password, placeholder: "Password" %>
+  <%= f.submit "Click to Log In"%>
+<% end %>
+
+<br><p>Don't have an account? <%= link_to "Click here to create one", new_user_path %></p>
